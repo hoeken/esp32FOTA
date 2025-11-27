@@ -332,7 +332,11 @@ $ gzip -c esp32-fota-http-2.bin > esp32-fota-http-2.bin.gz
 
 Arduino 3.x now supports bundled root certificates, which means 99% of sites (including github.com) will work over https and you don't need to maintain a custom certificate on your firmware.
 
-To enable this functionality, simply call ```esp32FOTA.useBundledCerts();``` during your setup.
+To enable this functionality, simply call this during your setup:
+
+```C++
+esp32FOTA.useBundledCerts();
+``` 
 
 If you are using Platformio / PIOArduino, the certificates are not automatically bundled and you will need to download them from [CURL](https://curl.se/docs/caextract.html).
 
